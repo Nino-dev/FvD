@@ -4,54 +4,163 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
+	font-family: 'Heineken';
+	src: url('../fonts/Heineken.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-
+	font-display: fallback;
 }
-
-
-
 
 
 /**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
 }
 
-button:not(:disabled), summary {
+button:not[disabled], summary {
 	cursor: pointer;
 }
-
-
-
 
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #007F2D;
+	--color-background: #fff;
+	--color-liquid: yellow;
+	--primary-font: Heineken;
+	--full-screen: 100vh;
+	--color-star: red;
 }
-
-
-
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
+  font-family: var(--primary-font), sans-serif;
   background-color:var(--color-background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: var(--full-screen);
+	overflow: hidden;
 }
 
-/* jouw code */
+/* Star Element */
+body h1:before{
+ content: '';
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translateX(-50%) translateY(-50%);
+ width: 22rem;
+ height: 22rem;
+ background: var(--color-star);
+ /* Clip-path laten schrijven door AI (normaal zou ik een SVG voor de ster gebruiken) */
+ clip-path: polygon(
+	 50% 0%,
+	 61% 35%,
+	 98% 35%,
+	 68% 57%,
+	 79% 91%,
+	 50% 70%,
+	 21% 91%,
+	 32% 57%,
+	 2% 35%,
+	 39% 35%
+ );
+ z-index: 1;
+}
 
+
+body:hover h1:before {
+	animation: moveStar .8s ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveStar {
+	0% {
+		top: 50%;
+	  left: 50%;
+		transform: translateX(-50%) translateY(-50%) rotate(0deg);
+
+	}
+	100% {
+		top: 1.75rem;
+		left: -2rem;
+		width: 3.25rem;
+	  height: 3.25rem;
+		transform: translateX(-50%) translateY(-50%) rotate(360deg);
+	}
+}
+
+/* Heineken Logo */
+h1 {
+	font-size: 4rem;
+	color: var(--color-text);
+	position: relative;
+	letter-spacing: -.7rem;
+}
+
+h1 span {
+	opacity: 0;
+}
+
+body:hover h1 span {
+	animation: revealText .8s ease-in;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+body:hover h1 {
+	animation: shakeGlass .1s ease-in;
+	animation-iteration-count: 8;
+	animation-delay: 2.1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes revealText {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes shakeGlass {
+	0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+/* Beer Background */
+body:hover:after{
+	top: var(--full-screen);
+	content:'';
+	position: absolute;
+	width: 200vw;
+	height: 200vw;
+	background: var(--color-liquid);
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+	animation: beerFill 5s ease-in;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+	border-radius: 35%;
+}
+
+@keyframes beerFill {
+	from {
+		top: var(--full-screen);
+		transform: translateX(-50%) rotate(0deg);
+	}
+	to {
+		top: 10vh;
+		transform: translateX(-50%) rotate(360deg);
+	}
+}
