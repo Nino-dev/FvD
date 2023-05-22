@@ -44,7 +44,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken bij afronden opdracht (voor week 4)</summary>
-   ### Peer Feedback
+  
+  ### Peer Feedback
 
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
