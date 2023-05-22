@@ -81,7 +81,6 @@ body h1:before{
  z-index: 1;
 }
 
-
 body:hover h1:before {
 	animation: moveStar .8s ease-in;
 	animation-fill-mode: forwards;
@@ -122,15 +121,18 @@ body:hover h1 span {
 }
 
 body:hover h1 {
-	animation: shakeGlass .1s ease-in;
+	animation: repositionLogo .2s ease-in .7s, shakeGlass .1s ease-in 2.1s;
 	animation-iteration-count: 8;
-	animation-delay: 2.1s;
 	animation-fill-mode: forwards;
 }
 
 @keyframes revealText {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
+}
+@keyframes repositionLogo {
+	0% { margin-left:2rem; }
+	100% { margin-left:2rem; }
 }
 
 @keyframes shakeGlass {
@@ -157,6 +159,7 @@ body:hover:after {
 	animation-delay: 3s;
 	animation-fill-mode: forwards;
 	border-radius: 35%;
+	margin-top:1rem;
 }
 
 @keyframes beerFill {
