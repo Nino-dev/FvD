@@ -20,7 +20,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. [Syntax](https://stackoverflow.com/questions/13233991/combine-after-with-hover)
   5. [Reduced Motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
   6. [Clippy](https://bennettfeely.com/clippy/)
-  7. [ChatGPT](https://chat.openai.com)
+  7. [Liquid effect tutorial](https://www.youtube.com/watch?v=wGPDuqgkoew&ab_channel=Codingflag)
+  8. [ChatGPT](https://chat.openai.com)
   
   ### ChatGPT code questions:
   <img src="readme-images/chatgpt.png" width="100%" alt="AI">
