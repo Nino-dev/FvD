@@ -34,15 +34,20 @@ button:not[disabled], summary {
 	--primary-font: Heineken;
 	--full-screen: 100vh;
 	--color-star: red;
+
+	--color-text-dark: #fff;
+	--color-background-dark: #000;
+	--color-liquid-dark: #007F2D;
 }
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
+
 body {
   font-family: var(--primary-font), sans-serif;
-  background-color:var(--color-background);
+  background: var(--color-background);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -138,7 +143,7 @@ body:hover h1 {
 
 
 /* Beer Background */
-body:hover:after{
+body:hover:after {
 	top: var(--full-screen);
 	content:'';
 	position: absolute;
@@ -162,5 +167,50 @@ body:hover:after{
 	to {
 		top: 10vh;
 		transform: translateX(-50%) rotate(360deg);
+	}
+}
+
+/* Dark Mode selected as preference */
+@media (prefers-color-scheme:dark) {
+	body {
+		background: var(--color-background-dark);
+	}
+
+	/* Star Element */
+	body h1:before {
+		background: var(--color-star);
+	}
+
+	/* Heineken Logo */
+	h1 {
+		color: var(--color-text-dark);
+	}
+
+	/* Beer Background */
+	body:hover:after {
+		background: var(--color-liquid-dark);
+	}
+}
+
+
+/* Don't animate only if the user has reduced selected */
+@media (prefers-reduced-motion) {
+	*, :before, :after {
+		animation: none !important;
+    transition: none !important;
+	}
+
+	/* Star Element */
+	body h1:before {
+		top: 1.75rem;
+		left: -2rem;
+		width: 3.25rem;
+	  height: 3.25rem;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	/* Heineken Logo */
+	h1 span {
+		opacity: 1;
 	}
 }
