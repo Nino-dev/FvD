@@ -168,7 +168,7 @@ body:hover:after {
 		transform: translateX(-50%) rotate(0deg);
 	}
 	to {
-		top: 10vh;
+		top: -4rem;
 		transform: translateX(-50%) rotate(360deg);
 	}
 }
@@ -195,7 +195,6 @@ body:hover:after {
 	}
 }
 
-
 /* Don't animate only if the user has reduced selected */
 @media (prefers-reduced-motion) {
 	*, :before, :after {
@@ -216,4 +215,11 @@ body:hover:after {
 	h1 span {
 		opacity: 1;
 	}
+}
+
+/* Fill beer background on mobile */
+@media only screen and (max-width: 767px) {
+body:hover:after {
+	width: 250vw;
+	height: 250vw;
 }
