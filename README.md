@@ -14,11 +14,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
-
-
+  1. [Tilt-shake functie](https://unused-css.com/blog/css-shake-animation/)
+  2. [Heineken Font](https://allyourfonts.com/font/heineken-font/)
+  3. [Clamp uitleg](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp)
+  4. [Syntax](https://stackoverflow.com/questions/13233991/combine-after-with-hover)
+  5. [Reduced Motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+  6. [Clippy](https://bennettfeely.com/clippy/)
+  7. [ChatGPT](https://chat.openai.com)
+  
+  ### ChatGPT code questions:
+  <img src="readme-images/chatgpt.png" width="100%" alt="AI">
 
 ## Opdracht 1 plan
 
@@ -46,25 +51,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 4)</summary>
   
   ### Peer Feedback
+   <img src="readme-images/peer-feedback.png" width="375px" alt="Peer Feedback">
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/heineken-animation.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/heineken-animation-dark.png" width="375px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
  Mijn focus lag nooit echt op animeren gedurende mijn front-end loopbaan. Door deze opdracht heb ik meer inzichten hoe je op verschillende manieren met CSS animaties kunt maken. Door de voorgaande oefenopdrachten en uitleg in de les ging het maken van mijn eigen animatie redelijk soepel. Iets wat totaal nieuw was voor mij was de darkmode en reduced motion settings. Deze gaan heel useful zijn in de toekomst voor mij. 
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/dark-mode.png" width="375px" alt="top">
+  <img src="readme-images/reduced.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Wat ik in het begin lastig vond was het centeren van mijn logo na de animatie. De animatie begint met de Heineken ster die gecentered staat en vervolgens gepositioneerd wordt als before binnen de h1. Dit zorgde ervoor dat in theorie de h1 wel gecentered was maar omdat de before (ster) er nog voor kwam was het geheel niet gecentered. Dit heb ik opgelost met een animatie die na de ster rotation de positionering van het h1 element corrigeert. Dit heb ik getimed met een animation-delay zodat de overgang niet hakkerig is. 
   
 Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrome responsive mode, ondanks dat er overflow: hidden op de body zit. Ik las dat dit een bug kon zijn van Chrome responsive mode.
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
-
 
 
 ## Opdracht 2 plan
