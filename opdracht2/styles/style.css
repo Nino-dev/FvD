@@ -48,6 +48,8 @@ button:not(:disabled), summary {
 	--color-background:#141414;
 	--color-star-default: grey;
 	--color-star-filled: gold;
+	--button-color: #000;
+	--button-background: #fff;
 }
 
 
@@ -60,7 +62,7 @@ body {
   background-color: var(--color-background);
 	background-image: url('../images/Logonetflix.png');
 	background-repeat: no-repeat;
-	background-position: center top 1rem;
+	background-position: center top 1.5rem;
 	background-size: 10rem;
 	max-width: 1440px;
 	margin: 0 auto;
@@ -145,7 +147,8 @@ section:nth-of-type(2) {
 
 body>button {
 	border: none;
-	background: #fff;
+	background: var(--button-background);
+	color: var(--button-color);
 	padding: 1rem 1.5rem;
 	border-radius: 4px;
 	font-size: 1.125rem;
