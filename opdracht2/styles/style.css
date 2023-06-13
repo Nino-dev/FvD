@@ -13,14 +13,11 @@
 }
 
 
-
-
-
 /**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
 }
 
 button:not(:disabled), summary {
@@ -28,30 +25,83 @@ button:not(:disabled), summary {
 }
 
 
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text:#e5e5e5;
+	--color-background:#141414;
+	--color-star-default: grey;
+	--color-star-filled: gold;
 }
-
-
-
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
+  font-family: eenfont, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+	padding: 0 2rem;
 }
 
-/* jouw code */
+/* Container met films */
+section:first-of-type {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+	width: 100%;
+}
 
+/* Dynamische card elements */
+section>article {
+	width: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+section>article>* {
+	flex-grow: 1;
+}
+
+section>article>img {
+	max-width: 100%;
+	width: 100%;
+}
+
+/* Ster Element */
+.star {
+	flex: 0 0 auto;
+  background: var(--color-star-default);
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.star.active:before {
+  background: var(--color-star-filled);
+}
+
+/* Modaal venster met favorieten lijst */
+section:nth-of-type(2) {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	background: black;
+	width: 100%;
+}
