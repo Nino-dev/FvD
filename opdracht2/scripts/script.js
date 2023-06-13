@@ -35,11 +35,14 @@ function fetchMoviesData(movieTitles) {
 function createMovieCard(movieData) {
 
   const card = document.createElement('article');
+
+  const thumbnailContainer = document.createElement('section');
+
   const thumbnail = document.createElement('img');
 
   thumbnail.src = movieData.Poster;
   thumbnail.alt = movieData.Title;
-  card.appendChild(thumbnail);
+  thumbnailContainer.appendChild(thumbnail);
 
   const title = document.createElement('h2');
   title.textContent = movieData.Title;
@@ -59,6 +62,7 @@ function createMovieCard(movieData) {
     toggleFavorite(movieData, favoriteButton);
   });
 
+  card.appendChild(thumbnailContainer);
   card.appendChild(title);
   card.appendChild(year);
   card.appendChild(plot);
@@ -103,5 +107,5 @@ function closeListModal() {
 closeListModal();
 
 // Executen van functie en definieren van movieTitle(s)
-const movieTitles = ['Avengers Endgame', 'Django Unchained', 'The Social Dilemma'];
+const movieTitles = ['Black Mirror', 'Django Unchained', 'The Social Dilemma','Stranger Things', 'Breaking Bad', 'Prison Break', 'The Walking Dead', 'Altered Carbon', 'Lost in Space'];
 fetchMoviesData(movieTitles);
