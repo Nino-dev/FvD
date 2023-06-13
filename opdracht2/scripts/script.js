@@ -14,7 +14,7 @@ function fetchMoviesData(movieTitles) {
   const movieContainer = sections[0];
 
   movieTitles.forEach(movieTitle => {
-    const apiUrl = `http://www.omdbapi.com/?apikey=d27400bd&t=${movieTitle}`;
+    const apiUrl = `https://www.omdbapi.com/?apikey=d27400bd&t=${movieTitle}`;
 
     fetch(apiUrl)
       .then(response => response.json())
