@@ -122,7 +122,9 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 <details>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/wireframe.png" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/finish.png" width="375px" alt="uitkomst opdracht 2">
+   <img src="readme-images/finish2.png" width="375px" alt="uitkomst opdracht 2">
+    <img src="readme-images/finish3.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -141,5 +143,5 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
   alleen van toepassing bij het navigeren met de Tab key. Uiteindelijk ben ik gekomen bij het focus & blur event waarmee ik dit heb kunnen 
   oplossen.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/focusandblur.png" width="375px" alt="Focus and Blur Event">
 </details>
