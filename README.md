@@ -76,11 +76,9 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 ## Opdracht 2 plan
 
 <details>
-  <summary>uitwerken na schetsen idee (voor week 5)</summary>
-
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/wireframe.png" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
@@ -124,17 +122,24 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 <details>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/wireframe.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  
+  Ik had al eens eerder met een API gewerkt tijdens het vak Inleiding programmeren: https://build.drippin.it/weatherapp/. Tijdens dit 
+  project heb ik echter alleen data opgehaald.
+  
+  Bij deze nieuwe opdracht voor FvD ben ik meer de diepte in gegaan door de focus te leggen op het opslaan van data naar een lijstje.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Waar ik lang tegen aan liep was het stylen van de buttons als er met de Tab key genavigeerd werd. Eerst probeerde ik het met de :focus   
+  selector te realiseren. Dit werkte echter niet goed voor mijn use case omdat :focus ook getriggerd wordt on click en de styling was 
+  alleen van toepassing bij het navigeren met de Tab key. Uiteindelijk ben ik gekomen bij het focus & blur event waarmee ik dit heb kunnen 
+  oplossen.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
