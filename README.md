@@ -85,12 +85,10 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - API
+  - Data opslaan
+  - Key events
 </details>
-
 
 
 ## Opdracht 2 test
@@ -98,28 +96,25 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 <details>
   <summary>uitwerken na testen (week 7)</summary>
 
-  Neem minimaal 5 bevindingen op:
-
-
-
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Nog geen animaties.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  De ster om een film in je favorieten te plaatsen animeren.
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Data wordt niet opgeslagen bij een refresh.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Data opslaan in local storage.
 
 
   ### Bevinding 3:
-  ...
+  Styling nog niet helemaal op orde.
+
+  #### oplossing: 
+  Styling afmaken.
 </details>
 
 
@@ -127,7 +122,6 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 ## Opdracht 2 reflectie
 
 <details>
-  <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
