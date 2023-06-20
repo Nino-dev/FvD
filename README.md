@@ -22,15 +22,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   6. [Clippy](https://bennettfeely.com/clippy/)
   7. [Liquid effect tutorial](https://www.youtube.com/watch?v=wGPDuqgkoew&ab_channel=Codingflag)
   8. [ChatGPT](https://chat.openai.com)
-  
+  9. [Flex none](https://css-tricks.com/almanac/properties/f/flex/)
+  10. [Array Splice](https://www.w3schools.com/jsref/jsref_splice.asp)
+  11. [Array Push](https://www.w3schools.com/jsref/jsref_push.asp)
+  12. [animationend](https://developer.mozilla.org/en-US/docs/Web/API/Element/animationend_event)
+  13. [Focus & Blur event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event)
+ 
   ### ChatGPT code questions:
   <img src="readme-images/chatgpt.png" width="100%" alt="AI">
 
 ## Opdracht 1 plan
 
-<details open>
-  <summary>uitwerken na schetsen idee (voor week 2)</summary>
-
+<details>
 
   ### Je storyboard:
   <img src="readme-images/storyboard-fvd.png" width="100%" alt="storyboard voor opdracht 1">
@@ -75,11 +78,10 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 
 ## Opdracht 2 plan
 
-<details>
+<details open>
 
   ### Je ontwerp:
   <img src="readme-images/wireframe.png" width="375px" alt="ontwerp opdracht 2">
-
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
@@ -92,7 +94,6 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
 ## Opdracht 2 test
 
 <details>
-  <summary>uitwerken na testen (week 7)</summary>
 
   ### Bevinding 1:
   Nog geen animaties.
@@ -114,7 +115,6 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
   #### oplossing: 
   Styling afmaken.
 </details>
-
 
 
 ## Opdracht 2 reflectie
