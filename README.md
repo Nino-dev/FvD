@@ -29,7 +29,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   13. [Focus & Blur event](https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event)
  
   ### ChatGPT code questions:
-  <img src="readme-images/chatgpt.png" width="100%" alt="AI">
+  <img src="readme-images/chatgpt.png" width="60%" alt="AI">
 
 ## Opdracht 1 plan
 
@@ -134,7 +134,7 @@ Iets wat niet gelukt is dat na de animatie alsnog gescrolled kan worden in Chrom
   
   Bij deze nieuwe opdracht voor FvD ben ik meer de diepte in gegaan door de focus te leggen op het opslaan van data naar een lijstje.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/favoritesfunctionsave.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
