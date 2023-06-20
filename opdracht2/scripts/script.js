@@ -5,12 +5,11 @@ const listModal = sections[1];
 const favoritesList = document.querySelector('ul');
 const closeButton = document.querySelector('span');
 
-// Array waar de favorieten worden opgeslagen
-const favoriteMovies = [];
+// Haal data op uit local storage, als er geen data is wordt het een lege array
+let favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
 
 // Fetch data
 function fetchMoviesData(movieTitles) {
-
   const movieContainer = sections[0];
 
   movieTitles.forEach(movieTitle => {
@@ -19,13 +18,10 @@ function fetchMoviesData(movieTitles) {
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-        // Create card element voor iedere film
         const movieCard = createMovieCard(data);
-        // Card elementen in de parent container gezet
         movieContainer.appendChild(movieCard);
       })
       .catch(error => {
-        // Error handling
         console.error('Error:', error);
       });
   });
@@ -33,13 +29,10 @@ function fetchMoviesData(movieTitles) {
 
 // Aanmaken van cards met de juiste data
 function createMovieCard(movieData) {
-
   const card = document.createElement('article');
 
   const thumbnailContainer = document.createElement('section');
-
   const thumbnail = document.createElement('img');
-
   thumbnail.src = movieData.Poster;
   thumbnail.alt = movieData.Title;
   thumbnailContainer.appendChild(thumbnail);
@@ -56,11 +49,44 @@ function createMovieCard(movieData) {
   // Favorieten knop (ster)
   const favoriteButton = document.createElement('div');
   favoriteButton.classList.add('star');
+  favoriteButton.setAttribute('tabindex', '0');
 
-  // Toggle state styling
+  // Checkt of er film data in de array is opgeslagen
+  const isFavorite = favoriteMovies.some(movie => movie.Title === movieData.Title);
+  if (isFavorite) {
+    favoriteButton.classList.add('active');
+  }
+
+  // Execute functie voor state styling ster element
   favoriteButton.addEventListener('click', () => {
     toggleFavorite(movieData, favoriteButton);
+    favoriteButton.classList.add('rotate-animation');
+  favoriteButton.addEventListener('animationend', () => {
+    favoriteButton.classList.remove('rotate-animation');
+  })
   });
+
+  // Execute functie bij Enter keydown event op de card
+  favoriteButton.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      toggleFavorite(movieData, favoriteButton);
+      favoriteButton.classList.add('rotate-animation');
+  favoriteButton.addEventListener('animationend', () => {
+    favoriteButton.classList.remove('rotate-animation');
+  })
+    }
+  });
+
+  // Focus event
+  favoriteButton.addEventListener('focus', () => {
+    favoriteButton.classList.add('focused');
+  });
+
+  // Remove focus class bij blur event
+  favoriteButton.addEventListener('blur', () => {
+    favoriteButton.classList.remove('focused');
+  });
+
 
   card.appendChild(thumbnailContainer);
   card.appendChild(title);
@@ -71,17 +97,20 @@ function createMovieCard(movieData) {
   return card;
 }
 
-// Functie voor de state
-function toggleFavorite(movieData, starElement) {
+// Toggle state functie & opslaan van data in de array
+function toggleFavorite(movieData, favoriteButton) {
   const index = favoriteMovies.findIndex(movie => movie.Title === movieData.Title);
 
   if (index > -1) {
     favoriteMovies.splice(index, 1);
-    starElement.classList.remove('active');
+    favoriteButton.classList.remove('active');
   } else {
     favoriteMovies.push(movieData);
-    starElement.classList.add('active');
+    favoriteButton.classList.add('active');
   }
+
+  // Stringify data en save in local storage
+  localStorage.setItem('favoriteMovies', JSON.stringify(favoriteMovies));
 }
 
 openListButton.addEventListener('click', openListModal);
@@ -93,7 +122,19 @@ function openListModal() {
   favoritesList.innerHTML = '';
   favoriteMovies.forEach(movie => {
     const listItem = document.createElement('li');
-    listItem.textContent = movie.Title;
+    const thumbnailContainer = document.createElement('section');
+    const thumbnail = document.createElement('img');
+
+    thumbnail.src = movie.Poster;
+    thumbnail.alt = movie.Title;
+    thumbnailContainer.appendChild(thumbnail);
+
+    listItem.appendChild(thumbnailContainer);
+
+    const titleParagraph = document.createElement('p');
+    titleParagraph.textContent = movie.Title;
+
+    listItem.appendChild(titleParagraph);
     favoritesList.appendChild(listItem);
   });
 }
